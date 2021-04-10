@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <h1>Føtex Lønberegner</h1>
+
+    <form class="form" action="udregning.html">
+        <label for="alder">Er du ungarbejder?</label>
+        <br>
+        <input list="alder" id="ungarbejder" name="ungarbejder" >
+        <datalist id="alder">
+            <option value="Ja"></option>
+            <option value="Nej"></option>
+        </datalist>
+
+        <br>
+        <br>
+        <br>
+        
+        <label for="antal">Hvor mange timer skal beregnes?</label>
+        <input type="text" id="antalTimer">
+        
+        <br>
+        <br>
+        <br>
+        <label for="aftenEllerMorgentimer">Har du flest morgenen eller aften?</label>
+        <input list="timeFordeling">
+
+        <datalist id="timeFordeling">
+            <option value="Kun morgen"></option>
+            <option value="50/50"></option>
+            <option value="Kun aften"></option>
+        </datalist>
+
+        <input type="submit">
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    background-color: #1D2F53;
+    color: white;
+    text-align: center;
+}
+
+a{
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    position: relative;
+    top: 100px;
+}
