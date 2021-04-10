@@ -8,8 +8,10 @@ var back = theProfile.baseUrl + "lon_beregner/";
 var tilbageKnap = document.querySelector(".back");
 
 tilbageKnap.innerHTML = `
-    <a href="${back}">Tilbage</a>
-`
+    <a href="https://kridt.github.io/lon_beregner/">Tilbage</a>
+` 
+
+
 
 løn = løn.toFixed(2)
 
