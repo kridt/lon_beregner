@@ -4,11 +4,11 @@ var sats = theProfile.Salary;
 var amBidrag = 0.92;
 var displayLøn = document.querySelector(".løn");
 var løn = (sats * antalTimer) * amBidrag;
-var back = theProfile.baseUrl;
+var back = theProfile.baseUrl + "lon_beregner/";
 var tilbageKnap = document.querySelector(".back");
 
 tilbageKnap.innerHTML = `
-    <a href="${back}/lon_beregner/">Tilbage</a>
+    <a href="${back}">Tilbage</a>
 `
 
 løn = løn.toFixed(2)
