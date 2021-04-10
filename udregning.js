@@ -8,7 +8,7 @@ var back = theProfile.baseUrl;
 var tilbageKnap = document.querySelector(".back");
 
 tilbageKnap.innerHTML = `
-    <a href="${back}/on_beregner/">Tilbage</a>
+    <a href="${back}/lon_beregner/">Tilbage</a>
 `
 
 løn = løn.toFixed(2)
