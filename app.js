@@ -2,15 +2,32 @@ var form = document.querySelector(".form");
 var ungarbejder = document.getElementById("ungarbejder");
 var timer = document.getElementById("antalTimer");
 var løn = 68.75;
-
+var aftenTimer = document.getElementById("timeFordelingId");
 var url = window.location.href;
 
 var profile = {};
-console.log(url);
+
 form.addEventListener("submit", function(e) {
     var antalTimer = timer.value;
 
     var hours = parseInt(antalTimer);
+
+    if(ungarbejder.value === "") {
+        e.preventDefault();
+        alert("Du skal vælge om du er ungarbejder")
+    }
+
+    if(timer.value === "") {
+        e.preventDefault();
+        alert("Du skal skrive et antal timer")
+    }
+
+    if(aftenTimer.value === "") {
+        e.preventDefault();
+        alert("Vælg en timefordeling")
+    }
+
+    console.log(timer.value);
 
     if(ungarbejder.value === "Nej") {
         løn = 123.83;
@@ -30,7 +47,8 @@ form.addEventListener("submit", function(e) {
     "Søndag": søndag,
     "Lørdag": lørdag,
     "Aften": aften,
-    "baseUrl": url
+    "baseUrl": url,
+    "aftenTimer": aftenTimer.value
     };
 
     sessionStorage.setItem("data", JSON.stringify(profile));   

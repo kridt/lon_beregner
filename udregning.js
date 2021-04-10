@@ -6,6 +6,7 @@ var displayLøn = document.querySelector(".løn");
 var løn = (sats * antalTimer) * amBidrag;
 var back = "https://kridt.github.io/lon_beregner/";
 var tilbageKnap = document.querySelector(".back");
+var aftenTimer = theProfile.aftenTimer;
 
 var url = window.location.hostname;
 
@@ -17,9 +18,21 @@ if(url === "127.0.0.1") {
 
 tilbageKnap.innerHTML = `
     <a href="${back}">Tilbage</a>
-` 
+`;
 
-console.log(back);
+if(aftenTimer === "Kun aften"){
+    var antalAftenTimer = antalTimer;
+    antalAftenTimer = antalAftenTimer * theProfile.Aften;
+    løn = løn + antalAftenTimer
+}
+
+if(aftenTimer === "50/50") {
+    antalAftenTimer = antalTimer * 0.5;
+    antalAftenTimer = antalAftenTimer * theProfile.Aften;
+    løn = løn + antalAftenTimer 
+}
+
+console.log(antalAftenTimer);
 
 løn = løn.toFixed(2)
 
