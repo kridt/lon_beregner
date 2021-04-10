@@ -3,7 +3,7 @@ var ungarbejder = document.getElementById("ungarbejder");
 var timer = document.getElementById("antalTimer");
 var løn = 68.75;
 
-var url = window.location.origin;
+var url = window.location.href;
 
 var profile = {};
 console.log(url);
