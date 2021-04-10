@@ -3,9 +3,10 @@ var ungarbejder = document.getElementById("ungarbejder");
 var timer = document.getElementById("antalTimer");
 var løn = 68.75;
 
+var url = window.location.origin;
 
 var profile = {};
-
+console.log(url);
 form.addEventListener("submit", function(e) {
     var antalTimer = timer.value;
 
@@ -28,7 +29,8 @@ form.addEventListener("submit", function(e) {
     "Antal_timer": hours,
     "Søndag": søndag,
     "Lørdag": lørdag,
-    "Aften": aften
+    "Aften": aften,
+    "baseUrl": url
     };
 
     sessionStorage.setItem("data", JSON.stringify(profile));   
