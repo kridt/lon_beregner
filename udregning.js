@@ -14,7 +14,7 @@ tilbageKnap.innerHTML = `
 løn = løn.toFixed(2)
 
  displayLøn.innerHTML = `
-    <h1>${løn}kr</h1>
+    <h1>${løn}on_beregner/kr</h1>
 `
  
 
